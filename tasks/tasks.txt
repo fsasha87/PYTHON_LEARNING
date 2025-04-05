@@ -1,0 +1,84 @@
+#1 Print:s1+s2; s1,s2; s*2; s,end=""; s1,s2,sep=""; str,int,bool; \t\n\"\r; "Me"+str(age); "Me{}".format(age); f"Me{age}"
+# int: 5/2; 5//2; 5%2; 5**2; +=; min(,,,); pow(,); round(5/3); math.sqrt(4); sqrt(4); 3+int(s); s+str(3); s,str(3)
+# string: s.find['a']; len[s]; s.cont['a']; s.upper(); s.isupper(); s.capitalize()
+# String: s => s.split(',') => print([]/[1]) => fori => ",".join([])
+# Slice: str/list[1]/[0:4]/[4:]/[4:-2]/[0:-1:2]/[::]/[::-1]/[::-2]/str[slice(0, 4)]
+# regex: re.match/search/findall(r'it',str) => re.compile('IT').findall(str) => re.split('e',str) => re.sub('e','E',str) => re.findall("a-m"/"^Hel.0$",str)
+# if: random.randint(1,99) => print(is_adult) => if not:print; if<18 => elif>60 =>else; ternar: status=s2 if>18 else s2
+# random.choice([,,]) => match x: case int()/str()/_:print()
+# for: range(1,10) => 3 continue => 5 break => print(i); forin s: print(i)  else:"end"; forin s: found 'a'; forin s: counter 'a'
+# while: i<5:print(i); сумма парных чисел 1-10, else"End"
+
+
+#2 list: [,,]=>len(l)=>append=>insert=>extend([,,])=>sort()=>reverse()=>pop()/(i)=>remove(v)=>count(v)=>forin=>clear()=>enumerate(li)
+# tuple: (),_ => forin => tuple[0]=1(TypeError) =>tuple[1:3]/[::-1]=> index(v) =>len => count => tuple(list) => tuple(str) => unpack:a,b=(1,3)=>print(b))
+# set:{}=>print(set[2])=>add=>update([,])=>remove(v)=>pop()=>clear; set(str); set(list); set(tuple); frozenset([,])=>add=>forin
+# set: {}{} =>print(s1|s2)/s1.union(s2)=>&/intersection=>-/difference=>update=>'a' in s1=>s1.issuperset("a")=>issubset
+# dict: {:,:} => if_k_in_d:print(d[k]/d.get(k)) => d[new_k]=v => del_d[k]/pop(k)/popitem()/clear => copy() => d1.update(d2)
+# dict: {:,:} =>for_i/k,v_in_d/d.items/keys/values);  dict([(,),(,)])/dict(=,=);  {:{:,:},:{:,:}} => print
+
+
+#3 func: pass=>minus(b=,a=)=>d_suma(arg=)=f1(2)=>func(square/suma,*a):forin_a->list; d_show(a*,k**)=>d_show(a,...)=>show([],{})
+# namespaces: LEG_name(create-print) => global => nonlocal; globals(); globals()['a']; def_sum:...locals()
+# module: globals()/dir() => a=10/list1/d_foo()/import_math/from_math_i_sqrt/from_math_i_* => print(dir()/globals())
+# mymodule.py: print();d_say():__name__;if__name__=='__main__':print;say; mmc.py: i_mm;mm.say();print(__name__/mm.__name__)
+# try:5/o=>except:/except_Zero_Error_as_ze:print(ze)=>else:'Passed'=>finally; try:int(input) if<0:raise_ValueError("") => except_Valueerror
+# try:class_CustomError(Exception):init(data)=>try:int(input(""))=>if<0:raise CustomError("")=> except_CE_as_e:print(e)
+# magic: person:_init_(name,age)->def_str_:return_f'{s.name}'->def_eq_{s,o}:if_isistance(o,Person):return_s.name=o.name_return_False->def_hash_:return_hash(s.name,s.age)
+# ->p1('A')=p2('A')=p3->pr(p1==p2)->pr(p1._eq_(p2))->pr(id(p1)=id(p3))->pr(hash(p1)=hash(p2))->#pr(o._str_()/_repr_/_dict_/_dir_/_class_/_module_/_doc_/_hash_)->str/repr/dir/hash(o)
+
+
+#4 encap: class_M: def__init__(self,a,_b,__c):...=> obj => print(obj.a/_b/_M__c)=>obj.a/_b/_M__c=...
+# encap: class_R: def_init:self__x=x => @property_def_x(self):return self.__x => @x.setter_def_x(self.x):self.__x=x =>
+# oop: class=>land;def__init__(self,name,age) => def_show(self) => tom.show; tom.land=FR =>print(Person/tom/tom.__class__.land)
+# oop: Person:init(name)+геттер+def__str__=> Employee(P):def_init:(super().__init__(name),company))+str:f"{super().__str__()}/self.name...=> isinstance(o,E)/issubclass(E,P)
+# oop: class_A: def_f1(self):print(self)=>@classmethod_def_f2(cls):...=>@staticmethod_def_f3():...=>obj.f()=>A.f(obj)
+# poly: class_Dog: def_speak:... => class_Cat: def_speak => def_foo(an):print(an.speak())=> foo(dog/cat)
+# abs: from_abc_import_ABC,abstractmethod->class_A(ABC):@abstractmethod_def_foo():pass->class_B(A):def_foo():print(...)->b.foo()
+
+
+#5 decor: def_milk(func):def_wr():print+func()+return wr; @milk_def_coffee():print; coffee()
+# decor: def_milk(func):def_wr():print+func()+return wr; def_coffee():print; coffee=milk(coffee); coffee()
+# decor: dev_f1(func):def_wr(a,b):if_b==0:...return return_func(a,b) return_wr; @f1_def_foo(a,b):return_a/b
+# iterator: li->iter1=iter(li)->print(next(iter1)); i=iter('Hello')->while_True:try:next(i)->except_StopIter:break; dict1->i=iter(dict1/dict1.values()/items())
+# lambda:cube=la_a:a**3->print(cube(3)); sum; s.upper; [(,),(,)].sort(key=la_x:x[1]); map(la_i:i*2,li)->print(list(map1)); li->list(filter(la_i:i%2,li));functools.reduce(la_x,y:x+y,li)
+# list_comprehension: l2=[i.upper()_for_i_in_list]; filter=[n_for_n_in_li_if...]/forin:if...:l2.append(i)
+# generator_expression: g=(n*2 for n in range(5))->print(type())->print(list(g)); LC: l2=[n*2_for_n_in_range(10)]
+# zip: li1,li2->z=[u*v for u,v in zip(li1,li2)]; str1,li->print(zip(str1,li)); x=enumerate(str/li)->print(dict(x))
+
+
+#6 io-txt: try:with_open(path,'r',enc='utf-8')_as_f: print(f.read(/7)/readline/readlines) => forin_f:print => except(FileNFE):
+# io-txt: with_open(path,'w+')_as_f: f.write(s)/f.writelines([,]) => f.seek(0) => print(f.read())
+# io-picture: list=[] => open(path,'rb'):f.read => open(path,'wb'):f.write
+# config.ini: [Data] H=host P=1-> c.py: c=configparser.ConfigParser()->c.read('config.ini')->h=c['Data']['H'] p=c['Data'].getint('P')-> print(h,p)
+# dotenv:p_i_python-dotenv->.env:HOST=localhost->a.py:i_os->load_dotenv()->print(os.getenv(''))
+# csv: rows=[] => with_open(path,'r')_as_f: => r=csv.reader(f) => header=next(r) => forin r: rows.append(i) => print(rows)
+# csv: {:,:} => open(...w...)=> csv.DictWriter(f,fieldnames=[,]])=> w.writeheader() => w.writerows({:,:})/ w.writerow => reader:print
+# json: import_json->s->dict1=json.loads(s); dict->s=json.dumps(dict)
+# json: dic->with_open('data.json','w')_as_f:json.dump(dic,f); with_open('path','r')_as_f:s=json.load(f)
+# xlsx: p_i_openpyxl: wb=openpyxl.load_workbook(path)->s=wb.active->print(s.cell(1,2).value)->print(s['A2'].value)
+# ->for_row_in_s.iter_rows(...):for_c_in_row:print(c.value); s['A1']='Hi'->wb.save(path)
+# yaml: p_i_pyyaml=>dic=> s=yaml.dump(dic,dfs=False); open(path,w):yaml.dump(dic,f,dfs); dic=yaml.safe_load(s); open(path,r):dic=yaml.safe_load(f)
+# postgress: p_i_psycopg2->psycopg2.connect(dbname="ishop",host="localhost",user="postgres",password="...",port="5432")
+# ->c=conn.cursor()->sql1="Select * from product"->c.execute(sql1)->print(c.fetchall())->c.close()->conn.close()
+
+
+#7 playwright+pytestCLI: # 1\ pCLI: pip install pytest-playwright => playwright install
+# 2\ from playwright.sync_api import Page, expect
+# def_test_1(page:Page): page.goto(url)    page.locator("").click()  expect(page.locator(""))).to_be_visible() assert (locator).inner_text()==
+# 3\ pytest.ini:   [pytest]    addopts = --headed --slowmo 300
+# 4\ conftest.py:  @pytest.fixture(scope="function"/"session", autouse=True) def foo(page): print("A") yield  print('B')
+# 5\ from psa import sync_playwright  @pytest.fixture def setup(): with (sync_playwright() as pw): br = pw.chromium.launch(headless=False)
+# c = br.new_context(viewport={"width": 1920, "height": 1080})  page = c.new_page()  page.goto("...")  yield page  c.close()  br.close()
+# 6\ def test_01(setup): page = setup  page.locator("").click()  expect(page).to_have_title("")  expect(page.locator("")).to_be_visible()
+#  PageObject: 1\ BasePage: init(self,page)
+#  2\ HomePage: init(self, page:Page): super().__init__(page)  self.btn=page.locator("")
+#  3\ def_check_title(self):expect(self.page).to_have_title("")  return self
+#  4\ def_check_btn(self):expect(self.btn).to_be_visible()  return self
+#  5\ def_click(self): self.btn.click() return OtherPage(self.page)
+#  6\ @pytest.fixture() def setup:...
+#  7\ def_test1(setup):  page=setup  HomePage(page).check_title().check_btn().click_btn()
+#  8\ allure
+#  API: pip install requests  import requests def_test1():resp=requests.get(url)  print(response.json()) assert resp.status_code==200
+#  log: import logging=>logging.basicConfig(filename='app.log', filemode='w', format='[%(asctime)s]-%(levelname)s-%(filename)s-[LINE:%(lineno)s]-%(message)s', level=logging.INFO)=>logging.info("smth print")
+
