@@ -1,6 +1,5 @@
 import math
 from math import sqrt
-import random
 
 # Print:s1+s2; s1,s2; s*2; s,end=""; s1,s2,sep=""; str,int,bool; \t\n\"\r; "Me"+str(age); "Me{}".format(age); f"Me{age}"
 print("str1" + "str2")  # str1str2
@@ -15,9 +14,7 @@ print("Me " + str(age))
 print("Me {}".format(age))
 print(f"Me {age}")
 
-
-# int: 5/2; 5//2; 5%2; 5**2; +=; min(,,,); pow(,); round(5/3); math.sqrt(4); sqrt(4); 3+int(s); s+str(3); s,str(3)
-
+# int: 5/2; 5//2; 5%2; 5**2; +=; min(,,,); pow(,); round(5/3); math.sqrt(4); random.randint; 3+int(s); s+str(3); s,str(3)
 print(5/2)  # 2.5
 print(5//2)  # 2
 print(5%2)  # 1
@@ -29,8 +26,9 @@ print(min(0, -1, 5))  # -1
 print(pow(5, 3))  # 125
 print(round(5 / 3))  # 2
 print(math.sqrt(4))  # 2.0
-print(random.randint(1, 10))  # 9
 print(sqrt(9))  # 3.0
+import random
+print(random.randint(1, 10))  # 9
 str_num = "5"
 print(3 + int(str_num))  # 8
 print(str_num + str(3))  # 53
@@ -46,16 +44,21 @@ print(word1.islower())
 print(word1.capitalize())  # 1й символ с заглавной, остальные в нижнем
 print(word1.find('p'))  # индекс совпадения
 
-# String: s => s.split(',') => print([]/[1]) => fori => ",".join([])
-word2 = 'Football, basketball, skate'
-hobby = word2.split(', ')
-print(hobby)  # ['Football', 'basketball', 'skate']
-print(hobby[1])  # basketball
-for i in range(len(hobby)):
-    hobby[i] = hobby[i].capitalize()
-    print(hobby[i])  # Football     Basketball      Skate
-result = ", ".join(hobby)
-print(result)  # Football, Basketball, Skate
+# String: s => s.split(',') => print(array/[1]) => fori/forange(len(array)):upper() => ",".join([])
+s1 = "Hello world from Mars"
+ar = s1.split(' ')
+print(ar)  # ['Hello', 'world', 'from', 'Mars']
+print(len(ar))  # 4
+print(ar[2])  # from
+for i in ar:
+    i = i.upper()
+    print(i)  # HELLO   WORLD   FROM    MARS
+print(", ".join(ar))  # Hello, world, from, Mars
+
+for i in range(len(ar)):
+    ar[i] = ar[i].upper()
+    print(ar[i])  # HELLO   WORLD   FROM    MARS
+print(", ".join(ar))  # HELLO, WORLD, FROM, MARS
 
 # Slice: str/list[1]/[0:4]/[4:]/[4:-2]/[0:-1:2]/[::]/[::-1]/[::-2]/str[slice(0, 4)]
 word3 = 'Football'
@@ -100,7 +103,7 @@ match x:
         print("Other type")
 
 
-# for: range(1,10) => 3 continue => 5 break => print(i); forin s: print(i)  else:"end"; forin s: found 'a'; forin s: counter 'a'
+# for: range(1,10) => 3 continue => 5 break => print(i); forin s: print(i); forin s: counter 'a'; forin s: found 'a';
 for i in range(1, 10):
     if i == 3:
         continue
@@ -128,7 +131,7 @@ for k in word:
         found = False
 print(f"There is {k} in word: {found}")
 
-# while: i<5:print(i); сумма парных чисел 1-10, else"End"
+# while: i<5:print(i); сумма парных чисел 1-10
 x = 1
 while x < 5:
      print(x)

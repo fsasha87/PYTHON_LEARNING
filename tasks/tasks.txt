@@ -1,13 +1,13 @@
 #1 Print:s1+s2; s1,s2; s*2; s,end=""; s1,s2,sep=""; str,int,bool; \t\n\"\r; "Me"+str(age); "Me{}".format(age); f"Me{age}"
-# int: 5/2; 5//2; 5%2; 5**2; +=; min(,,,); pow(,); round(5/3); math.sqrt(4); sqrt(4); 3+int(s); s+str(3); s,str(3)
+# int: 5/2; 5//2; 5%2; 5**2; +=; min(,,,); pow(,); round(5/3); math.sqrt(4); random.randint; 3+int(s); s+str(3); s,str(3)
 # string: s.find['a']; len[s]; s.cont['a']; s.upper(); s.isupper(); s.capitalize()
-# String: s => s.split(',') => print([]/[1]) => fori => ",".join([])
+# String: s => s.split(',') => print(array/[1]) => fori/forange(len(array)):upper() => ",".join([])
 # Slice: str/list[1]/[0:4]/[4:]/[4:-2]/[0:-1:2]/[::]/[::-1]/[::-2]/str[slice(0, 4)]
-# regex: re.match/search/findall(r'it',str) => re.compile('IT').findall(str) => re.split('e',str) => re.sub('e','E',str) => re.findall("a-m"/"^Hel.0$",str)
 # if: random.randint(1,99) => print(is_adult) => if not:print; if<18 => elif>60 =>else; ternar: status=s2 if>18 else s2
 # random.choice([,,]) => match x: case int()/str()/_:print()
-# for: range(1,10) => 3 continue => 5 break => print(i); forin s: print(i)  else:"end"; forin s: found 'a'; forin s: counter 'a'
-# while: i<5:print(i); сумма парных чисел 1-10, else"End"
+# for: range(1,10) => 3 continue => 5 break => print(i); forin s: print(i); forin s: counter 'a'; forin s: found 'a';
+# while: i<5:print(i); сумма парных чисел 1-10
+# regex: re.match/search/findall(r'it',str) => re.compile('IT').findall(str) => re.split('e',str) => re.sub('e','E',str) => re.findall("a-m"/"^Hel.0$",str)
 
 
 #2 list: [,,]=>len(l)=>append=>insert=>extend([,,])=>sort()=>reverse()=>pop()/(i)=>remove(v)=>count(v)=>forin=>clear()=>enumerate(li)
