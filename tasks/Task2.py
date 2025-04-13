@@ -1,33 +1,28 @@
-# list: [,,]=>len(l)=>append=>insert=>extend([,,])=>sort()=>reverse()=>pop()/(i)=>remove(v)=>count(v)=>forin=>clear()
-numbers = [5, 2, 7]
-# numbers[3] = 100  # IndexError:
-numbers.append(100)
-print(numbers)  # [5, 2, 7, 100]
-numbers.insert(1, True)
-print(numbers)  # [5, True, 2, 7, 100]
-numbers.extend([5, 6, 8])
-print(numbers)  # [5, True, 2, 7, 100, 5, 6, 8]
-numbers.sort()
-print(numbers)  # [True, 2, 5, 5, 6, 7, 8, 100]
-numbers.reverse()
-print(numbers)  # [100, 8, 7, 6, 5, 5, 2, True]
-numbers.pop()  # удалили последний элемент
-print(numbers)  # [100, 8, 7, 6, 5, 5, 2]
-numbers.remove(100)
-print(numbers)  # [8, 7, 6, 5, 5, 2]
-numbers.pop(-2)  # удалили по индексу
-print(numbers)  # [8, 7, 6, 5, 2]
-# numbers.clear()  # удалит все
-# print(numbers)  # []
-print(numbers.count(6))  # количество совпадений
-print(len(numbers))  # кол-во елементов
-nums2 = [5, 2, 7, "50", False]
-for el in nums2:
-    el *= 2
-    print(el)
+#2 list: [,,]=>len(l)=>IndexError=>append=>insert=>extend([,,])=>sort()=>reverse()=>pop()/(i)=>remove(v)=>count(v)=>forin=>for_enumerate(li)=>clear()
+nums = [2, 6, -1, 0, 10]
+print(len(nums))
+#  print(nums[5])  # IndexError
+nums.insert(4, 23)  # [2, 6, -1, 0, 23, 10]
+nums.extend([9, 8, 7])  # [2, 6, -1, 0, 23, 10, 9, 8, 7]
+nums.sort()  # [-1, 0, 2, 6, 7, 8, 9, 10, 23]
+nums.reverse()  # [23, 10, 9, 8, 7, 6, 2, 0, -1]
+nums.pop()  # [23, 10, 9, 8, 7, 6, 2, 0]
+nums.pop(3)  # [23, 10, 9, 7, 6, 2, 0]
+nums.pop(-2)  # [23, 10, 9, 7, 6, 0]
+nums.remove(23)  # [10, 9, 7, 6, 0]
+print(nums.count(9))  # 1
+for i in nums:
+    i = i*3
+    print(i, end=" ")  # 30 27 21 18 0
+print("\n")
+print(len(nums))
+for i, nums in enumerate(nums):
+    print(f"{i}: {nums}")  # 0: 10    1: 9    2: 7    3: 6    4: 0
+# nums.clear()
 
 
-# tuple: (),_ => forin => tuple[0]=TypeError =>tuple[1:3]/[::-1]=> index(v) =>len => count => tuple(list) => tuple(str)
+
+# tuple: (),_ => forin => tuple[0]=1(TypeError) =>tuple[1:3]/[::-1]=> index(v) =>len => count => tuple(list) => tuple(str) => (a,b)/a,b/c=(1,3)/1,3 => print(c/*c/type)
 data = (6, True, 5.6, 'Hello')
 # data[0] = 5  # TypeError
 print(data)  # (6, True, 5.6, 'Hello')
@@ -44,6 +39,19 @@ print(new_data)  # (5, 7, 8)
 word4 = tuple("Hello")
 print(word4)  # ('H', 'e', 'l', 'l', 'o')
 
+(a, b) = (1, 3)
+print(type((a, b)))  # <class 'tuple'>
+print((a, b))  # (1, 3)
+print(a, b)  # 1 3
+c, d = 2, 4
+print(type((c, d)))  # <class 'tuple'>
+print((c, d))  # (2, 4)
+print(c, d)  # 2 4
+c = 10, 2, -5
+print(type(c))
+print(c)
+print(*c)
+
 
 # set:{}=>print(set[2])=>add=>update([,])=>remove(v)=>pop()=>clear; set(str); set(list); set(tuple); frozenset([,])=>add=>forin
 set1 = {5, 7, 4, 3, 5}
@@ -59,6 +67,11 @@ set1.pop()  # {3, 4, 5, 6, 7, '23'}
 # set1.clear()  # set()
 print(set1)
 print(set("Hello"))  # {'l', 'H', 'e', 'o'}
+
+
+
+
+
 nums = [5, 7, 3, 5, 5, 21]
 nums = set(nums)
 print(nums)  # {21, 3, 5, 7}

@@ -10,7 +10,7 @@
 # regex: re.match/search/findall(r'it',str) => re.compile('IT').findall(str) => re.split('e',str) => re.sub('e','E',str) => re.findall("a-m"/"^Hel.0$",str)
 
 
-#2 list: [,,]=>len(l)=>append=>insert=>extend([,,])=>sort()=>reverse()=>pop()/(i)=>remove(v)=>count(v)=>forin=>clear()=>enumerate(li)
+#2 list: [,,]=>len(l)=>IndexError=>append=>insert=>extend([,,])=>sort()=>reverse()=>pop()/(i)=>remove(v)=>count(v)=>forin=>for_enumerate(li)=>clear()
 # tuple: (),_ => forin => tuple[0]=1(TypeError) =>tuple[1:3]/[::-1]=> index(v) =>len => count => tuple(list) => tuple(str) => unpack:a,b=(1,3)=>print(b))
 # set:{}=>print(set[2])=>add=>update([,])=>remove(v)=>pop()=>clear; set(str); set(list); set(tuple); frozenset([,])=>add=>forin
 # set: {}{} =>print(s1|s2)/s1.union(s2)=>&/intersection=>-/difference=>update=>'a' in s1=>s1.issuperset("a")=>issubset
